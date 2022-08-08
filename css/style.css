@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+header{
+    width: 100%;
+    height: 20vh;
+}
+.logo{
+    width: 20%;
+    margin-left: 20px;
+    float: left;
+    margin: 70px 0;
+}
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+nav{
+    float: left;
+    width: 60%;
+    margin: 70px 0;
+}
+.ss{
+    width: 478px;
+    height: 270px;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 100%;
+    transform: scale(0,0);
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 5px;
+    padding: 15px;
+    border: 2px solid #603830;
+    transition: 1s;
+}
+.ss-c{
+    position: relative;
+}
+.ss-c::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-bottom: 2px dashed #603830;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ss ul li a{
+    color: #603830;
+}
+.ss ul li{
+    font-size: 20px;
+    list-style: none;
+    padding: 10px;
+    line-height: 20px;
+    margin: 6px;
+}
+.nav-a ul{
+    float: left;
+}
+.nav-a:hover .ss{
+    transform: scale(1,1);
+    visibility: visible;
+    opacity: 1;
+}
+nav .nav-a{
+    position: relative;
+}
+nav > li{
+    display: inline-block;
+}
+nav > li > a{
+    padding: 15px;
+    font-size: 20px;
+    color: #603830;
+    line-height: 50px;   
+}
+nav .nav-a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #603830;
+    border-right: 2px solid #603830;
+    transform: scale3D(1,0,1);
+    transition: 0.2s;
+}
+nav .nav-a:hover::after{
+    transform: scale3D(1,1,1);
+}
+nav .nav-a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-top: 2px solid #603830;
+    border-bottom: 2px solid #603830;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+nav .nav-a:hover::before{
+    width: 100%;
+}
+.icons{
+    width: 15%;
+    float: left;
+    margin: 80px 0;
+}
+.icons i{
+    margin: 2px;
+    font-size: 20px;
+}
+.num{
+    font-size: 15px;
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 10px;
+}
+.num::before{
+    content: "0";
+    position: absolute;
+    background-color: #603830;
+    color: white;
+    font-size: 13px;
+    left: -17px;
+    border-radius: 50%;
+    padding: 4px;
+    bottom: -4px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+}
+main .container img{
+    width: 100%;
+    height: 70vh;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. */
+.category{
+    width: 100%;
+    height: 50vh;
+}
+.tittle{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 25px;
+}
+.liness{
+    width: 100px;
+    height: 2px;
+    background-color: #603830;
+    margin: auto;
+    margin: 10px auto 70px auto;
+    transition: 1s;
+}
+.Featured:hover .liness{
+    transform: scale(1.5,1);
+}
+.category:hover .liness{
+    transform: scale(1.5,1);
+}
+.items-category span{
+    display: block;
+    color: rgb(189, 189, 189);
+    margin: 5px 0;
+}
+.items-category img{
+    width: 100%;
+}
+.items-category{
+    width: 23%;
+    height: 350px;
+    float: left;
+    position: relative;
+    margin-top: 50px;
+}
+.items-category .icon{
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 30px;
+}
+.items-category:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}
+.space-item-categry1{
+    margin-left: 2%;
+}
+.space-item-categry2{
+    margin: 50px 2%;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< category >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. */
+.market{
+    width: 100%;
+    height: 50vh;
+    margin-top: 150px;
+}
+.market-main{
+    width: 47%;
+    height: 300px;
+    float: left;
+    background-color:beige;
+    padding: 18px;
+    position: relative;
+}
+.headen span{
+    color: #603830;
+    font-size: 15px;
+}
+.market-item{
+    width: 23%;
+    height: 300px;
+    float: left;
+    background-image: url(../images/cms-banner-1.jpg);
+    background-size: cover;
+    transition: 1s;
+}
+.market-item:hover{
+    transform: scale(1.2,1.2);
+}
+.img-market-item{
+    background-image: url(../images/cms-banner-2.jpg)
+}
+.space-market{
+    margin: 0 3%;
+}
+.market-item-info{
+    margin: 10px;
+}
+.lines{
+    width: 200px;
+    height: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+.lines div{
+    width: 50px;
+    height: 3px;
+    background-color:#603830;
+    float: left;
+    margin: 0 5px;
+}
+.headen i{
+    float: left;
+    color: #603830;
+    font-size: 40px;
+}
+.headen div{
+    float: left;
+    width: 480px;
+}
+.market-main p{
+    margin-top: 70px;
+}
+.market-item-info h3{
+    color: #603830;
+    font-size: 16px;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< market >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.frees{
+    width: 100%;
+    height: 20vh;
+}
+.free{
+    width: 18.55%;
+    height: 20vh;
+    float: left;
+    text-align: center;
+}
+.free:hover .free-img1{
+    top: -90px;
+}
+.free:hover .free-img2{
+    top: -275px;
+}
+.free:hover .free-img3{
+    top: -460px;
+}
+.free:hover .free-img4{
+    top: -640px;
+}
+.free:hover .free-img5{
+    top: -820px;
+}
+.free-line{
+    width: 2px;
+    height: 15vh;
+    margin: 10px 10px;
+    background-color: #603830;
+    float: left;
+}
+.free-img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+}
+.free-img img{
+    position: absolute;
+    left: 0;
+    transition: 1s;
+}
+.free-img1{
+    top: 0;
+}
+.free-img2{
+    top: -185px;
+}
+.free-img3{
+    top: -365px;
+}
+.free-img4{
+    top: -550px;
+}
+.free-img5{
+    top: -730px;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Frees >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.line-bottom{
+    width: 80%;
+    height: 2px;
+    background-color: #603830;
+    margin: auto;
+}
+.Featured{
+    width: 100;
+    height: 120vh;
+    margin: 50px 0 300px 0;
+}
+.liness:hover {
+    transform: scale(1.5,1);
+}
+.liness{
+    width: 100px;
+    height: 2px;
+    background-color:#603830;
+    margin: auto;
+    transition: 1s;
+}
+.Featured h2{
+    text-align: center;
+}
+.Featured .Featured-titles{
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    margin:20px auto;
+}
+.Featured div h5{
+    float: left;
+    margin: 0 10px;
+}
+.Featured-item{
+    width: 30%;
+    height: 60vh;
+    float: left;
+    position: relative;
+}
+.Featured-item:hover .Featured-item-img2{
+    transform: scale(1,1);
+}
+.Featured-item .Featured-item-img1 div img{
+    width: 100%;
+    height: 370px;
+}
+.Featured-item .Featured-item-img1 i{
+    color: yellow;
+}
+.Featured-item .Featured-item-img1 .star-no-color{
+    color: #262626;
+}
+.featured-center{
+    margin: 0 5%;
+}
+.Featured-items{
+    padding: 50px;
+    width: 100%;
+    height: 70vh;
+}
+.Featured-item-info .Featured-item-img1 p{
+    font-size: 14px;
+}
+.Featured-item-info .Featured-item-img1 span{
+    font-size: 20px;
+}
+.Featured-item-img2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0,0);
+    transition: 0.5s;
+}
+.Featured-item-img2 div img{
+    width: 100%;
+    height: 60vh;
+}
+.Featured-item-img2-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Featured-item-img2-icon i{
+    background-color:#603830 ;
+    margin: 0 5px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.Featured-item-img1{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Featured >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
